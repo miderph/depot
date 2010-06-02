@@ -1,0 +1,52 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+ <html xmlns="http://www.w3.org/1999/xhtml">  
+ <head>  
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+ <title>test</title>  
+ <script type="text/javascript">  
+           /*  
+      * Draw a Oval  
+      * author:李英夫, Thanks for 袁洲's help in math.  
+      * The following is the formula of Oval.  
+      * All dots is drawn by it.  
+      * x = r*a*cosθ　(0 <= θ <= 2π)  
+      * y = r*b*sinθ　(0 <= θ <= 2π)  
+      * b*b + r*r = a*a //Pythagoras Theorem  
+      */  
+     var Circle = {  
+         centre_of_circle : {x:200,y:200},  
+         radius : 12,  
+         dot : function(x,y,w){  
+             return "<div id='dot_"+x+y+"' style='display:none;font-size:0;width:"+w+"px;height:"+w+"px;position:absolute;background-color:000;top:"+(y)+"px;left:"+(x)+"px'></div>";  
+         },  
+         draw : function(){  
+             var s = "",  
+                 dots = 500,  
+                 a = 15,  
+                 b = 9,  
+                 dotsArr = [];  
+             for(var i = 0; i < dots; i++){  
+                 var x = Circle.centre_of_circle.x+Circle.radius*Math.cos(i*2*Math.PI/dots)*a;  
+                 var y = Circle.centre_of_circle.y+Circle.radius*Math.sin(i*2*Math.PI/dots)*b;  
+                 s += Circle.dot(x, y, 2);  
+                 dotsArr.push({"y":y,"x":x});  
+             }  
+             document.body.innerHTML = s;  
+             return dotsArr;  
+         }  
+     }  
+     window.onload = function(){  
+         var dots = Circle.draw();  
+         var count = 0;  
+         var t = window.setInterval(function(){  
+            document.getElementById("dot_"+dots[count].x+dots[count].y).style.display = "block";  
+            count++;  
+            if(count >= dots.length) window.clearInterval(t);  
+         },1);  
+     }  
+ </script>  
+ </head>  
+   
+ <body>  
+ </body>  
+ </html>

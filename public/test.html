@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>JQuery测试</title>
+    <style type="text/css">
+        
+        /*table中偶数行*/ 
+        
+        .tabEven {
+            background: #ff0000;
+        }
+        
+        /*table中奇数行*/ 
+        
+        .tabOdd {
+            background: #00ff00;
+        }
+    </style>
+    <script language="javascript" src="javascripts/jquery-1.3.2.min.js">
+    </script>
+    <script language = "JavaScript" type="text/javascript">
+        //<![CDATA[
+        
+        $(document).ready(function(){
+            $("#tabTest tr:even").addClass("tabEven");
+            $("#tabTest tr:odd").addClass("tabOdd");
+            $("#btnAdd").bind("click", function(event) {alert("addClass"); $("p").addClass("colorRed borderBlue"); });
+            $("#btnRemove").bind("click",function(event){alert("removeClass");$("p").removeClass("colorRed");});
+             $("#btnSetBg").bind("click",function(event){alert("setBg");$("p").css({color: "#ff0011",background:"blue"});});
+        });
+                $(function() {  
+             var img1 = document.getElementById("hibiscus");  
+             //alert(img1.alt);  
+             img1.alt = "Change the alt element attribute";  
+             //alert(img1.alt);  
+             //alert(img1.src);  
+         }) ;
+           
+        //]]>
+    </script>
+</head>
+<body>
+    <table id="tabTest">
+        <tbody>
+            <tr>
+                <td>快购利众网_1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>快购利众网_2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>快购利众网_3</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>快购利众网_4</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>快购利众网_5</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+    <img src="images/image.1.jpg" mce_src="images/image.1.jpg" id="hibiscus" alt="Hibiscus" class="classA" />  
+    <button id="btnAdd" >addClass</button>
+    <button id="btnRemove">removeClass</button> 
+    <button id="btnSetBg">设置颜色</button>
+    <p> per test content</p>
+    <p> per test content</p>
+    <p> per test content</p>
+    <p> per test content</p>
+    <p> per test content</p>
+</body>
+</thml>

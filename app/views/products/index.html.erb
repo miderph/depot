@@ -1,0 +1,28 @@
+<h1>Listing products</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Desc</th>
+    <th>Imge url</th>
+    <th>Price</th>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+  	<td><%=cycle("one_1","one_2") %></td>
+    <td><%=h product.title %></td>
+    <td><%=h product.desc %></td>
+    <td><%=h product.imge_url %></td>
+    <td><%=h product.price %></td>
+	<td><%= button_to 'ChangeState', change_state_product_path(product) %></td>
+    <td><%= link_to 'Show', product %></td>
+    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New product', new_product_path %>

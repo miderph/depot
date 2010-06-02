@@ -1,0 +1,3625 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (40.9ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100127160028)
+  [4;36;1mSQL (46.4ms)[0m   [0;1mCREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `desc` text, `imge_url` varchar(255), `price` decimal, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100127160028')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `products`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-01-28 00:01:52) [GET]
+  [4;36;1mProduct Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 122ms (View: 45, DB: 2) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-01-28 00:01:56) [GET]
+  [4;35;1mProduct Load (0.8ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+Completed in 158ms (View: 13, DB: 1) | 200 OK [http://localhost/products/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-01-28 00:01:58) [GET]
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 70ms (View: 6, DB: 2) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-01-28 00:02:06) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"pYmv7UzE28x3n6gtPMz3vPNi41PiwwAGIc2f1dCLRxA=", "product"=>{"price"=>"fdsafda", "title"=>"admin", "desc"=>"fdsajfdasj", "imge_url"=>"fakjfdakjfdas"}}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Create (0.5ms)[0m   [0mINSERT INTO `products` (`price`, `created_at`, `title`, `updated_at`, `desc`, `imge_url`) VALUES(0, '2010-01-27 16:02:06', 'admin', '2010-01-27 16:02:06', 'fdsajfdasj', 'fakjfdakjfdas')[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed in 79ms (DB: 7) | 302 Found [http://localhost/products]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-01-28 00:02:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (22.3ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 135ms (View: 9, DB: 25) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-01-28 00:02:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 123ms (View: 21, DB: 3) | 200 OK [http://localhost/products/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-01-28 00:02:12) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"pYmv7UzE28x3n6gtPMz3vPNi41PiwwAGIc2f1dCLRxA=", "id"=>"1", "product"=>{"price"=>"0", "title"=>"admin", "desc"=>"fdsajfdasj", "imge_url"=>""}}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Update (24.2ms)[0m   [0;1mUPDATE `products` SET `updated_at` = '2010-01-27 16:02:12', `imge_url` = '' WHERE `id` = 1[0m
+  [4;35;1mSQL (5.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed in 148ms (DB: 33) | 302 Found [http://localhost/products/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-01-28 00:02:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.9ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 108ms (View: 4, DB: 3) | 200 OK [http://localhost/products/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-01-28 00:02:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 116ms (View: 14, DB: 3) | 200 OK [http://localhost/products/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-01-28 00:02:21) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"pYmv7UzE28x3n6gtPMz3vPNi41PiwwAGIc2f1dCLRxA=", "id"=>"1", "product"=>{"price"=>"0", "title"=>"", "desc"=>"", "imge_url"=>""}}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (0.6ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-01-27 16:02:22', `title` = '', `desc` = '' WHERE `id` = 1[0m
+  [4;36;1mSQL (7.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed in 127ms (DB: 11) | 302 Found [http://localhost/products/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-01-28 00:02:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.9ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 121ms (View: 4, DB: 3) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-01-28 00:02:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 115ms (View: 15, DB: 3) | 200 OK [http://localhost/products/1/edit]
+  [4;36;1mSQL (24.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-05-18 23:25:39) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-18 23:25:56) [GET]
+
+ActionController::RoutingError (No route matches "/peoples" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-05-18 23:25:58) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mMysql::Error: Table 'depot_development.people' doesn't exist: SHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100127160028)
+Migrating to CreatePeople (20100518152331)
+  [4;36;1mSQL (127.4ms)[0m   [0;1mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `age` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (31.9ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100518152331')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (5.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `people`[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mSHOW KEYS FROM `people`[0m
+  [4;36;1mSQL (20.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (7.6ms)[0m   [0mdescribe `products`[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mSHOW KEYS FROM `products`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPerson Columns (9.6ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (6.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (19.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100127160028)
+Migrating to CreatePeople (20100518152331)
+Migrating to AddCurrentStateFieldToPersonTable (20100518154114)
+  [4;36;1mSQL (114.5ms)[0m   [0;1mALTER TABLE `people` ADD `current_state` varchar(255)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100518154114')[0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mdescribe `people`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW KEYS FROM `people`[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mdescribe `products`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `products`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPerson Columns (15.2ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Create (0.5ms)[0m   [0;1mINSERT INTO `people` (`name`, `current_state`, `created_at`, `updated_at`, `age`) VALUES(NULL, 'sleeping', '2010-05-18 15:42:53', '2010-05-18 15:42:53', NULL)[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Create (0.5ms)[0m   [0mINSERT INTO `people` (`name`, `current_state`, `created_at`, `updated_at`, `age`) VALUES(NULL, 'sleeping', '2010-05-18 15:43:31', '2010-05-18 15:43:31', NULL)[0m
+  [4;36;1mSQL (10.4ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (24.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-05-19 23:33:35) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: ):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-19 23:33:38) [GET]
+
+ActionController::RoutingError (No route matches "/product" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-19 23:33:41) [GET]
+  [4;36;1mProduct Load (1.2ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 339ms (View: 210, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-05-19 23:33:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduct Columns (7.8ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (27.2ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 179ms (View: 34, DB: 35) | 200 OK [http://localhost/products/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-05-19 23:33:48) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"1", "product"=>{"price"=>"0", "title"=>"fdsafd", "desc"=>"fdasf", "imge_url"=>"fdasf"}}
+  [4;36;1mProduct Columns (12.5ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.7ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProduct Update (67.6ms)[0m   [0mUPDATE `products` SET `updated_at` = '2010-05-19 15:33:48', `imge_url` = 'fdasf', `title` = 'fdsafd', `desc` = 'fdasf' WHERE `id` = 1[0m
+  [4;36;1mSQL (15.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/products/1
+Completed in 221ms (DB: 97) | 302 Found [http://localhost/products/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-05-19 23:33:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 136ms (View: 25, DB: 3) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-05-19 23:33:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (7.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 127ms (View: 13, DB: 9) | 200 OK [http://localhost/products/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-19 23:33:54) [GET]
+  [4;35;1mProduct Load (6.5ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 126ms (View: 56, DB: 9) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-05-19 23:33:55) [GET]
+  [4;35;1mProduct Columns (8.1ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 104ms (View: 30, DB: 9) | 200 OK [http://localhost/products/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-05-19 23:34:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "product"=>{"price"=>"fdasfds", "title"=>"fdsafd", "desc"=>"fdsafd", "imge_url"=>"fdsafd"}}
+  [4;36;1mProduct Columns (11.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mProduct Create (13.0ms)[0m   [0;1mINSERT INTO `products` (`price`, `created_at`, `title`, `updated_at`, `desc`, `imge_url`) VALUES(0, '2010-05-19 15:34:00', 'fdsafd', '2010-05-19 15:34:00', 'fdsafd', 'fdsafd')[0m
+  [4;35;1mSQL (6.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/products/2
+Completed in 112ms (DB: 31) | 302 Found [http://localhost/products]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-05-19 23:34:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mProduct Columns (3.0ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (1.0ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 2) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 123ms (View: 7, DB: 4) | 200 OK [http://localhost/products/2]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-19 23:34:02) [GET]
+  [4;36;1mProduct Load (1.1ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 133ms (View: 62, DB: 4) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-19 23:35:15) [GET]
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 191ms (View: 71, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-20 00:09:56) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 1045ms (View: 877, DB: 4) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-05-20 00:12:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mProduct Load (0.9ms)[0m   [0mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 144ms (View: 43, DB: 3) | 200 OK [http://localhost/products/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2010-05-20 00:13:01) [GET]
+  Parameters: {"id"=>"change_state"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: change_state, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2010-05-20 00:13:24) [GET]
+  Parameters: {"id"=>"change_state"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: change_state, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#change_state (for 127.0.0.1 at 2010-05-20 00:14:26) [GET]
+  Parameters: {"id"=>"1"}
+Completed in 2ms (View: 1, DB: 4) | 200 OK [http://localhost/products/1/change_state]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-20 00:15:48) [GET]
+  [4;36;1mProduct Load (0.9ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 230ms (View: 102, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2010-05-20 00:15:49) [POST]
+  Parameters: {"authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"change_state"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: change_state, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#change_state (for 127.0.0.1 at 2010-05-20 00:16:11) [POST]
+  Parameters: {"authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"2"}
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/products/2/change_state]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#2 (for 127.0.0.1 at 2010-05-20 00:16:28) [GET]
+  Parameters: {"id"=>"change_state"}
+
+ActionController::UnknownAction (No action responded to 2. Actions: change_state, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2010-05-20 00:16:32) [POST]
+  Parameters: {"authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"change_state"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: change_state, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-20 00:16:36) [GET]
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 135ms (View: 67, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2010-05-20 00:16:37) [POST]
+  Parameters: {"authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"change_state"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: change_state, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-20 00:16:50) [GET]
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 172ms (View: 62, DB: 3) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#change_state (for 127.0.0.1 at 2010-05-20 00:16:51) [POST]
+  Parameters: {"authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"1"}
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/products/1/change_state]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#1 (for 127.0.0.1 at 2010-05-21 23:12:25) [GET]
+  Parameters: {"id"=>"change_state"}
+
+ActionController::UnknownAction (No action responded to 1. Actions: change_state, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-21 23:12:30) [GET]
+  [4;36;1mProduct Load (1.0ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (3.0ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 356ms (View: 221, DB: 4) | 200 OK [http://localhost/products/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#change_state (for 127.0.0.1 at 2010-05-21 23:13:11) [POST]
+  Parameters: {"authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"1"}
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/products/1/change_state]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-05-21 23:15:36) [GET]
+  [4;36;1mProduct Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 100ms (View: 30, DB: 2) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-05-21 23:15:38) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "product"=>{"price"=>"", "title"=>"", "desc"=>"", "imge_url"=>""}}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (4.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 163ms (View: 33, DB: 10) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (27.1ms)[0m   [0;1mDROP DATABASE IF EXISTS `depot_test`[0m
+  [4;35;1mSQL (15.4ms)[0m   [0mCREATE DATABASE `depot_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (7.8ms)[0m   [0mCREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `age` int(11), `created_at` datetime, `updated_at` datetime, `current_state` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mCREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `desc` text, `imge_url` varchar(255), `price` integer, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (5.7ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100518154114')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20100518152331')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20100127160028')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-21 23:50:16) [GET]
+  [4;36;1mProduct Load (1.8ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (15.2ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 220ms (View: 103, DB: 17) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-05-21 23:50:17) [GET]
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 87ms (View: 8, DB: 2) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#create (for 127.0.0.1 at 2010-05-21 23:50:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "product"=>{"price"=>"", "title"=>"", "desc"=>"", "imge_url"=>""}}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 157ms (View: 49, DB: 2) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-21 23:50:43) [GET]
+  [4;36;1mProduct Load (0.7ms)[0m   [0;1mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;35;1mProduct Columns (4.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Completed in 270ms (View: 114, DB: 6) | 200 OK [http://localhost/products]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-05-21 23:50:45) [GET]
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+
+ActionView::TemplateError (`@#<Product:0xb72c1570>' is not allowed as an instance variable name) on line #5 of app/views/products/new.html.erb:
+2: 
+3: <% form_for(@product) do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= error_messages_for(@product)%>
+6:   <p>
+7:     <%= f.label :title %><br />
+8:     <%= f.text_field :title %>
+
+    app/views/products/new.html.erb:5
+    app/views/products/new.html.erb:3
+    app/controllers/products_controller.rb:29:in `new'
+
+Rendered rescues/_trace (74.0ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-05-21 23:51:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+
+ActionView::TemplateError (`@#<Product:0xb734fba4>' is not allowed as an instance variable name) on line #5 of app/views/products/edit.html.erb:
+2: 
+3: <% form_for(@product) do |f| %>
+4:   <%= f.error_messages %>
+5:   <%= error_messages_for(@product)%>
+6:   <p>
+7:     <%= f.label :title %><br />
+8:     <%= f.text_field :title %>
+
+    app/views/products/edit.html.erb:5
+    app/views/products/edit.html.erb:3
+
+Rendered rescues/_trace (65.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#index (for 127.0.0.1 at 2010-05-21 23:52:29) [GET]
+  [4;35;1mProduct Load (0.6ms)[0m   [0mSELECT * FROM `products` [0m
+Rendering template within layouts/products
+Rendering products/index
+  [4;36;1mProduct Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Completed in 320ms (View: 143, DB: 3) | 200 OK [http://localhost/products]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-05-21 23:52:31) [GET]
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+
+ActionView::TemplateError (undefined method `error_messages' for #<ActionView::Base:0xb72d0f48>) on line #5 of app/views/products/new.html.erb:
+2: 
+3: <% form_for(@product) do |f| %>
+4:   <%= f.error_messages %>
+5:   <%=error_messages @product%>
+6:   <p>
+7:     <%= f.label :title %><br />
+8:     <%= f.text_field :title %>
+
+    app/views/products/new.html.erb:5
+    app/views/products/new.html.erb:3
+    app/controllers/products_controller.rb:29:in `new'
+
+Rendered rescues/_trace (67.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-05-21 23:52:41) [GET]
+  [4;36;1mProduct Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+
+ActionView::TemplateError (`@#<Product:0xb71c7cc8>' is not allowed as an instance variable name) on line #5 of app/views/products/new.html.erb:
+2: 
+3: <% form_for(@product) do |f| %>
+4:   <%= f.error_messages %>
+5:   <%=error_messages_for @product%>
+6:   <p>
+7:     <%= f.label :title %><br />
+8:     <%= f.text_field :title %>
+
+    app/views/products/new.html.erb:5
+    app/views/products/new.html.erb:3
+    app/controllers/products_controller.rb:29:in `new'
+
+Rendered rescues/_trace (97.8ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-05-21 23:52:51) [GET]
+  [4;35;1mProduct Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 214ms (View: 19, DB: 2) | 200 OK [http://localhost/products/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-05-22 00:01:17) [GET]
+  [4;36;1mProduct Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 155ms (View: 29, DB: 2) | 200 OK [http://localhost/products/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-05-22 00:01:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 179ms (View: 22, DB: 3) | 200 OK [http://localhost/products/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-05-22 00:01:27) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"1", "product"=>{"price"=>"0", "title"=>"", "desc"=>"fdasf", "imge_url"=>"fdasf"}}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (13.4ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (1.7ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 291ms (View: 36, DB: 19) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#show (for 127.0.0.1 at 2010-05-22 00:01:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (12.0ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/show
+Completed in 236ms (View: 31, DB: 14) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-05-22 00:01:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 192ms (View: 26, DB: 3) | 200 OK [http://localhost/products/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-05-22 00:01:51) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"1", "product"=>{"price"=>"0", "title"=>"", "desc"=>"fdasf", "imge_url"=>"fdasf"}}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.9ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 210ms (View: 12, DB: 3) | 200 OK [http://localhost/products/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#edit (for 127.0.0.1 at 2010-05-22 00:03:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mProduct Columns (4.7ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (0.6ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 175ms (View: 23, DB: 6) | 200 OK [http://localhost/products/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#update (for 127.0.0.1 at 2010-05-22 00:03:43) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"4YO6euoc3zkIdzRwTXBKk1XLveMqnxlRqFqlZ0hcyGM=", "id"=>"1", "product"=>{"price"=>"0", "title"=>"fdsafd", "desc"=>"fdasf", "imge_url"=>"fdasf"}}
+  [4;35;1mProduct Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mProduct Load (1.2ms)[0m   [0;1mSELECT * FROM `products` WHERE (`products`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/products
+Rendering products/edit
+Completed in 201ms (View: 6, DB: 4) | 200 OK [http://localhost/products/1]
+/!\ FAILSAFE /!\  Sat May 22 22:36:14 +0800 2010
+  Status: 500 Internal Server Error
+  No such file or directory - /var/run/mysqld/mysqld.sock
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `initialize'
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `new'
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `real_connect'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `connect'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `new'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `mysql_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:27:in `dispatch'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/ruby/bin/mongrel_rails:19:in `load'
+    /usr/local/ruby/bin/mongrel_rails:19
+/!\ FAILSAFE /!\  Sat May 22 22:36:18 +0800 2010
+  Status: 500 Internal Server Error
+  No such file or directory - /var/run/mysqld/mysqld.sock
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `initialize'
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `new'
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `real_connect'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `connect'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `new'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `mysql_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:27:in `dispatch'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/ruby/bin/mongrel_rails:19:in `load'
+    /usr/local/ruby/bin/mongrel_rails:19
+/!\ FAILSAFE /!\  Sat May 22 22:36:37 +0800 2010
+  Status: 500 Internal Server Error
+  No such file or directory - /var/run/mysqld/mysqld.sock
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `initialize'
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `new'
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `real_connect'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `connect'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `new'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `mysql_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:27:in `dispatch'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/ruby/bin/mongrel_rails:19:in `load'
+    /usr/local/ruby/bin/mongrel_rails:19
+/!\ FAILSAFE /!\  Sat May 22 22:36:40 +0800 2010
+  Status: 500 Internal Server Error
+  No such file or directory - /var/run/mysqld/mysqld.sock
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `initialize'
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `new'
+    /usr/local/ruby/lib/ruby/1.8/mysql.rb:99:in `real_connect'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:585:in `connect'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:199:in `initialize'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `new'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/mysql_adapter.rb:71:in `mysql_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /usr/local/ruby/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:9:in `cache'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/query_cache.rb:28:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/activerecord-2.3.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/head.rb:9:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/methodoverride.rb:24:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/params_parser.rb:15:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/failsafe.rb:26:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `synchronize'
+    /home/miderph/.gem/ruby/1.8/gems/rack-1.0.0/lib/rack/lock.rb:11:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:114:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/reloader.rb:34:in `run'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:108:in `call'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/cgi_process.rb:44:in `dispatch_cgi'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
+    /home/miderph/.gem/ruby/1.8/gems/actionpack-2.3.4/lib/action_controller/dispatcher.rb:27:in `dispatch'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    /usr/local/ruby/bin/mongrel_rails:19:in `load'
+    /usr/local/ruby/bin/mongrel_rails:19
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductsController#new (for 127.0.0.1 at 2010-05-22 22:38:34) [GET]
+  [4;36;1mProduct Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+Rendering template within layouts/products
+Rendering products/new
+Completed in 256ms (View: 142, DB: 4) | 200 OK [http://localhost/products/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#send (for 127.0.0.1 at 2010-05-22 22:51:43) [GET]
+
+ActionController::UnknownAction (No action responded to send. Actions: sendmail):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 22:51:47) [GET]
+
+ActionView::MissingTemplate (Missing template emailer/contact.erb in view path app/views):
+  app/controllers/emailer_controller.rb:7:in `sendmail'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 22:52:43) [GET]
+Sent mail to miderph@163.com
+
+Date: Sat, 22 May 2010 22:52:43 +0800
+From: miderph.yan@oobmedia.com
+To: miderph@163.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 5931ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 22:56:21) [GET]
+Sent mail to miderph@163.com
+
+Date: Sat, 22 May 2010 22:56:21 +0800
+From: miderph.yan@oobmedia.com
+To: miderph@163.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 675ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 22:56:57) [GET]
+Sent mail to miderph@163.com
+
+Date: Sat, 22 May 2010 22:56:57 +0800
+From: miderph.yan@oobmedia.com
+To: miderph@163.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 21370ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 22:57:28) [GET]
+Sent mail to miderph@163.com
+
+Date: Sat, 22 May 2010 22:57:28 +0800
+From: miderph.yan@oobmedia.com
+To: miderph@163.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 352ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 22:58:19) [GET]
+Sent mail to miderph@163.com
+
+Date: Sat, 22 May 2010 22:58:19 +0800
+From: miderph.yan@oobmedia.com
+To: miderph@163.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 58ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 22:59:09) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 22:59:09 +0800
+From: miderph.yan@oobmedia.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 22:59:12) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 22:59:12 +0800
+From: miderph.yan@oobmedia.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 23:11:04) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 23:11:04 +0800
+From: miderph.yan@oobmedia.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 1327ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 23:11:53) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 23:11:53 +0800
+From: miderph.yan@oobmedia.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 739ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 23:15:18) [GET]
+
+NameError (undefined local variable or method `this' for #<Emailer:0xb7149198>):
+  app/models/emailer.rb:12:in `contact'
+  app/controllers/emailer_controller.rb:7:in `sendmail'
+
+Rendered rescues/_trace (290.2ms)
+Rendered rescues/_request_and_response (1.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 23:15:30) [GET]
+
+NoMethodError (undefined method `attributes' for #<Emailer:0xb721f194>):
+  app/models/emailer.rb:12:in `contact'
+  app/controllers/emailer_controller.rb:7:in `sendmail'
+
+Rendered rescues/_trace (169.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-22 23:16:03) [GET]
+end contact
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 23:16:03 +0800
+From: miderph.yan@oobmedia.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+Hi!  
+You are having one email message from 
+miderph.yan@oobmedia.comwith a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+Thanks 
+Completed in 91ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:25:55) [GET]
+
+ActionView::MissingTemplate (Missing template emailer/reminder.erb in view path app/views):
+  app/controllers/emailer_controller.rb:12:in `reminder'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:26:52) [GET]
+
+ActionView::MissingTemplate (Missing template emailer/reminder.erb in view path app/views):
+  app/controllers/emailer_controller.rb:12:in `reminder'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:26:55) [GET]
+
+ActionView::MissingTemplate (Missing template emailer/reminder.erb in view path app/views):
+  app/controllers/emailer_controller.rb:12:in `reminder'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminde (for 127.0.0.1 at 2010-05-22 23:27:09) [GET]
+
+ActionController::UnknownAction (No action responded to reminde. Actions: reminder and sendmail):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:27:14) [GET]
+
+ActionView::MissingTemplate (Missing template emailer/reminder.erb in view path app/views):
+  app/controllers/emailer_controller.rb:12:in `reminder'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:27:38) [GET]
+
+ActionView::MissingTemplate (Missing template emailer/reminder.erb in view path app/views):
+  app/controllers/emailer_controller.rb:12:in `reminder'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:28:25) [GET]
+1111
+
+ActionView::MissingTemplate (Missing template emailer/reminder.erb in view path app/views):
+  app/controllers/emailer_controller.rb:13:in `reminder'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:29:27) [GET]
+1111
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 23:29:27 +0800
+From: miderph.yan@oobmedia.com
+To: miderph.yan@gmail.com
+Subject: Your login information at depot.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+2222
+Completed in 961ms (View: 1, DB: 1) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:30:13) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 23:30:13 +0800
+From: miderph.yan@oobmedia.com
+To: miderph.yan@gmail.com
+Subject: Your login information at depot.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+Completed in 198ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-22 23:30:56) [GET]
+
+ActionController::RoutingError (No route matches "/login" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:36:04) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 23:36:04 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: Your login information at depot.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+Completed in 15549ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:42:42) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 23:42:42 +0800
+From: miderph@163.com
+To: miderph.yan@gmail.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+Completed in 13145ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:47:55) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 23:47:55 +0800
+From: miderph@163.com
+To: miderph.yan@gmail.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+Completed in 17455ms (View: 0, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:48:29) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sat, 22 May 2010 23:48:29 +0800
+From: miderph@163.com
+To: miderph.yan@gmail.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+Completed in 16610ms (View: 1, DB: 1) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:50:00) [GET]
+Sent mail to miderph.yan@oobmedia.com
+
+Date: Sat, 22 May 2010 23:50:00 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@oobmedia.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+Completed in 6810ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-22 23:51:59) [GET]
+Sent mail to miderph.yan@oobmedia.com
+
+Date: Sat, 22 May 2010 23:51:59 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@oobmedia.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+Completed in 3604ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-23 00:02:10) [GET]
+Sent mail to miderph.yan@oobmedia.com
+
+Date: Sun, 23 May 2010 00:02:10 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@oobmedia.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+Completed in 46507ms (View: 1, DB: 1) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:09:49) [GET]
+end contact
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:09:49 +0800
+From: miderph.yan@oobmedia.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+You are having one email message 
+from  miderph.yan@oobmedia.com 
+with a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+
+Thanks 
+Completed in 23523ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:13:11) [GET]
+end contact
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:13:11 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+You are having one email message 
+from  dexterdeng@gmail.com 
+with a tilte This is title
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+
+Thanks 
+Completed in 67170ms (View: 1, DB: 1) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:20:08) [GET]
+end contact
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:20:08 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message 
+and following is the message: 从 actionMailer 发送出来的email,测试内容
+
+Thanks 
+Completed in 25781ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:21:02) [GET]
+end contact
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:21:02 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message .
+message: 从 actionMailer 发送出来的email,测试内容
+
+Thanks 
+Completed in 13948ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:22:10) [GET]
+end contact
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:22:10 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message .
+message: 从 actionMailer 发送出来的email,测试内容
+This is title
+dexterdeng@gmail.com
+Thanks 
+Completed in 18612ms (View: 1, DB: 1) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:25:08) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:25:08 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message .
+from:miderph.yan@gmail.com
+title:actionMailer
+message: 从 actionMailer 发送出来的email,测试内容
+
+Thanks 
+Completed in 18452ms (View: 1, DB: 1) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (3.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:26:36) [GET]
+Sent mail to dexterdeng@gmail.com
+
+Date: Sun, 23 May 2010 00:26:36 +0800
+From: miderph.yan@gmail.com
+To: dexterdeng@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message .
+from:dexterdeng@gmail.com
+title:actionMailer
+message: 从 actionMailer 发送出来的email,测试内容
+
+Thanks 
+Completed in 20895ms (View: 1, DB: 5) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:28:01) [GET]
+Sent mail to dexterdeng@gmail.com
+
+Date: Sun, 23 May 2010 00:28:01 +0800
+From: miderph.yan@gmail.com
+To: dexterdeng@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message .
+from:miderph.yan@gmail.com
+title:actionMailer
+message: 从 actionMailer 发送出来的email,测试内容
+
+Thanks 
+Completed in 12557ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:31:08) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:31:08 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message .
+from:miderph.yan@gmail.com
+title:actionMailer
+message: 从 actionMailer 发送出来的email,测试内容
+<a href="www.localhost.com">localhost</a>
+Thanks 
+Completed in 105055ms (View: 1, DB: 1) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:35:46) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:35:46 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message .
+from:miderph.yan@gmail.com
+title:actionMailer
+message: 从 actionMailer 发送出来的email,测试内容
+<a href="www.localhost.com">localhost</a>
+Thanks 
+Completed in 15020ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:36:17) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:36:17 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message .
+from:miderph.yan@gmail.com
+title:actionMailer
+message: 从 actionMailer 发送出来的email,测试内容
+<a href="www.localhost.com">localhost</a>
+Thanks 
+Completed in 52ms (View: 0, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#sendmail (for 127.0.0.1 at 2010-05-23 00:37:24) [GET]
+Sent mail to miderph.yan@gmail.com
+
+Date: Sun, 23 May 2010 00:37:24 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@gmail.com
+Subject: actionMailer
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hi!  
+
+You are having one email message .
+from:miderph.yan@gmail.com
+title:actionMailer
+message: 从 actionMailer 发送出来的email,测试内容
+<a href="www.localhost.com">localhost</a>
+Thanks 
+Completed in 53ms (View: 0, DB: 0) | 200 OK [http://localhost/emailer/sendmail]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-23 00:37:38) [GET]
+Sent mail to miderph.yan@oobmedia.com
+
+Date: Sun, 23 May 2010 00:37:38 +0800
+From: miderph.yan@gmail.com
+To: miderph.yan@oobmedia.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+<a href="www.163.com">网易</a>
+Completed in 14ms (View: 0, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-23 00:38:51) [GET]
+Sent mail to miderph.yan@oobmedia.com
+
+Date: Sun, 23 May 2010 00:38:51 +0800
+From: miderph@163.com
+To: miderph.yan@oobmedia.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+<a href="www.163.com">网易</a>
+Completed in 32ms (View: 23, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-23 00:39:09) [GET]
+Sent mail to miderph.yan@oobmedia.com
+
+Date: Sun, 23 May 2010 00:39:09 +0800
+From: miderph@163.com
+To: miderph.yan@oobmedia.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+<a href="www.163.com">网易</a>
+Completed in 9ms (View: 0, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EmailerController#reminder (for 127.0.0.1 at 2010-05-23 00:40:45) [GET]
+Sent mail to miderph.yan@oobmedia.com
+
+Date: Sun, 23 May 2010 00:40:45 +0800
+From: miderph@163.com
+To: miderph.yan@oobmedia.com
+Subject: Your login information at space.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+reminder you login information
+<a href="www.163.com">网易</a>
+Completed in 33043ms (View: 1, DB: 0) | 200 OK [http://localhost/emailer/reminder]
+  [4;36;1mSQL (24.7ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-26 00:20:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.mini.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-26 00:20:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.mini.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-26 00:21:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery.mini.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-26 00:37:21) [GET]
+
+ActionController::RoutingError (No route matches "/helloworl.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-26 00:37:27) [GET]
+
+ActionController::RoutingError (No route matches "/helloworld.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-26 00:37:38) [GET]
+
+ActionController::RoutingError (No route matches "/helloworl.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (24.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-27 22:49:29) [GET]
+
+ActionController::RoutingError (No route matches "/em" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-27 23:32:47) [GET]
+
+ActionController::RoutingError (No route matches "/setinterval.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-27 23:46:59) [GET]
+
+ActionController::RoutingError (No route matches "/interval.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-28 00:05:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (30.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 22:59:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:00:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:01:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:02:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:02:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:02:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:02:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:03:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:04:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:04:19) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:05:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:05:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:05:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:06:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:06:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:07:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:08:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:09:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:11:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:11:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:11:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:15:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:16:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:16:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:17:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:17:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:18:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:18:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:22:03) [GET]
+
+ActionController::RoutingError (No route matches "/getattr.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:37:08) [GET]
+
+ActionController::RoutingError (No route matches "/scripts/jquery-1.3.2-vsdoc2.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:38:25) [GET]
+
+ActionController::RoutingError (No route matches "/scripts/jquery-1.3.2.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:40:20) [GET]
+
+ActionController::RoutingError (No route matches "/scripts/jquery-1.3.2.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:40:21) [GET]
+
+ActionController::RoutingError (No route matches "/scripts/jquery-1.3.2.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:40:46) [GET]
+
+ActionController::RoutingError (No route matches "/scripts/jquery-1.3.2.min.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:41:03) [POST]
+  Parameters: {"resultType"=>"html"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:41:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:41:29) [POST]
+  Parameters: {"resultType"=>"html"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:42:07) [POST]
+  Parameters: {"resultType"=>"html"}
+
+ActionController::RoutingError (No route matches "/www.oobmedia.com" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:42:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:42:31) [POST]
+  Parameters: {"resultType"=>"html"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-30 23:42:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:12:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:12:21) [POST]
+  Parameters: {"resultType"=>"html"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:13:14) [POST]
+  Parameters: {"resultType"=>"html", "method"=>"get"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:26:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:27:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:33:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:39:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:41:50) [POST]
+  Parameters: {"param"=>"btnAjaxPost_click"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:42:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:44:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:45:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:49:48) [POST]
+  Parameters: {"param"=>"btnAjaxPost_click"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:51:29) [POST]
+  Parameters: {"param"=>"btnAjaxPost_click"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:51:35) [POST]
+  Parameters: {"param"=>"btnAjaxPost_click"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:51:36) [POST]
+  Parameters: {"param"=>"btnAjaxPost_click"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:51:36) [POST]
+  Parameters: {"param"=>"btnAjaxPost_click"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:51:36) [POST]
+  Parameters: {"param"=>"btnAjaxPost_click"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:51:37) [POST]
+  Parameters: {"param"=>"btnAjaxPost_click"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:51:38) [POST]
+  Parameters: {"param"=>"btnAjaxPost_click"}
+
+ActionController::RoutingError (No route matches "/test.html" with {:method=>:post}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:55:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/image.1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:57:01) [GET]
+  Parameters: {"param"=>"btnAjaxGet_click"}
+
+ActionController::RoutingError (No route matches "/data/AjaxGetMethod.aspx" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:57:02) [GET]
+  Parameters: {"param"=>"btnAjaxGet_click"}
+
+ActionController::RoutingError (No route matches "/data/AjaxGetMethod.aspx" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:57:02) [GET]
+  Parameters: {"param"=>"btnAjaxGet_click"}
+
+ActionController::RoutingError (No route matches "/data/AjaxGetMethod.aspx" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:57:02) [GET]
+  Parameters: {"param"=>"btnAjaxGet_click"}
+
+ActionController::RoutingError (No route matches "/data/AjaxGetMethod.aspx" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 05:57:02) [GET]
+  Parameters: {"param"=>"btnAjaxGet_click"}
+
+ActionController::RoutingError (No route matches "/data/AjaxGetMethod.aspx" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100127160028)
+Migrating to CreatePeople (20100518152331)
+Migrating to AddCurrentStateFieldToPersonTable (20100518154114)
+Migrating to AddAttachmentsPhotoToPerson (20100531141639)
+  [4;36;1mSQL (21.0ms)[0m   [0;1mALTER TABLE `people` ADD `photo_file_name` varchar(255)[0m
+  [4;35;1mSQL (13.8ms)[0m   [0mALTER TABLE `people` ADD `photo_content_type` varchar(255)[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mALTER TABLE `people` ADD `photo_file_size` int(11)[0m
+  [4;35;1mSQL (9.1ms)[0m   [0mALTER TABLE `people` ADD `photo_updated_at` datetime[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100531141639')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `people`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW KEYS FROM `people`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `products`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `products`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `products`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (22.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (20100127160028)
+Migrating to CreatePeople (20100518152331)
+Migrating to AddCurrentStateFieldToPersonTable (20100518154114)
+Migrating to AddAttachmentsPhotoToPerson (20100531141639)
+Migrating to CreateAlbums (20100531145250)
+  [4;36;1mSQL (95.9ms)[0m   [0;1mCREATE TABLE `albums` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100531145250')[0m
+Migrating to AddAttachmentsPhotoToAlbum (20100531145334)
+  [4;36;1mSQL (11.1ms)[0m   [0;1mALTER TABLE `albums` ADD `photo_file_name` varchar(255)[0m
+  [4;35;1mSQL (13.9ms)[0m   [0mALTER TABLE `albums` ADD `photo_content_type` varchar(255)[0m
+  [4;36;1mSQL (8.5ms)[0m   [0;1mALTER TABLE `albums` ADD `photo_file_size` int(11)[0m
+  [4;35;1mSQL (9.9ms)[0m   [0mALTER TABLE `albums` ADD `photo_updated_at` datetime[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100531145334')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `albums`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `albums`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `people`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `people`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `products`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mdescribe `products`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW KEYS FROM `products`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 22:56:11) [GET]
+  [4;36;1mAlbum Load (0.8ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+Completed in 220ms (View: 131, DB: 1) | 200 OK [http://localhost/albums]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-31 22:56:13) [GET]
+  [4;35;1mAlbum Columns (8.3ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 111ms (View: 23, DB: 9) | 200 OK [http://localhost/albums/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-05-31 22:56:21) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "album"=>{"photo"=>"001fd088d83b0cac107e02.jpg"}}
+  [4;36;1mAlbum Columns (13.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (23.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mAlbum Create (0.5ms)[0m   [0;1mINSERT INTO `albums` (`created_at`, `photo_file_size`, `updated_at`, `photo_file_name`, `photo_content_type`, `photo_updated_at`) VALUES('2010-05-31 14:56:21', NULL, '2010-05-31 14:56:21', NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+  [4;35;1mSQL (28.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/albums/1
+Completed in 169ms (DB: 66) | 302 Found [http://localhost/albums]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-31 22:56:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (11.3ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (28.5ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 192ms (View: 8, DB: 40) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 22:57:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (11.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 204ms (View: 25, DB: 12) | 200 OK [http://localhost/albums/1/edit]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 22:58:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (13.4ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.9ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 151ms (View: 19, DB: 16) | 200 OK [http://localhost/albums/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 22:58:24) [GET]
+  [4;36;1mAlbum Load (14.8ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (5.2ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+
+ActionView::TemplateError (undefined local variable or method `tiny' for #<ActionView::Base:0xb732b18c>) on line #9 of app/views/albums/index.html.erb:
+6: 
+7: <% @albums.each do |album| %>
+8:   <tr>
+9:     <td><%= img_tag album.photo.url(tiny)%> </td>
+10:     <td><%= link_to 'Show', album %></td>
+11:     <td><%= link_to 'Edit', edit_album_path(album) %></td>
+12:     <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/albums/index.html.erb:9
+    app/views/albums/index.html.erb:7:in `each'
+    app/views/albums/index.html.erb:7
+    app/controllers/albums_controller.rb:7:in `index'
+
+Rendered rescues/_trace (69.1ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 22:58:36) [GET]
+  [4;36;1mAlbum Load (15.3ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (7.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+
+ActionView::TemplateError (undefined method `img_tag' for #<ActionView::Base:0xb71ea14c>) on line #9 of app/views/albums/index.html.erb:
+6: 
+7: <% @albums.each do |album| %>
+8:   <tr>
+9:     <td><%= img_tag album.photo.url(:tiny)%> </td>
+10:     <td><%= link_to 'Show', album %></td>
+11:     <td><%= link_to 'Edit', edit_album_path(album) %></td>
+12:     <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/albums/index.html.erb:9
+    app/views/albums/index.html.erb:7:in `each'
+    app/views/albums/index.html.erb:7
+    app/controllers/albums_controller.rb:7:in `index'
+
+Rendered rescues/_trace (66.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 22:58:42) [GET]
+  [4;36;1mAlbum Load (7.8ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+
+ActionView::TemplateError (undefined method `imge_tag' for #<ActionView::Base:0xb71fd01c>) on line #9 of app/views/albums/index.html.erb:
+6: 
+7: <% @albums.each do |album| %>
+8:   <tr>
+9:     <td><%= imge_tag album.photo.url(:tiny)%> </td>
+10:     <td><%= link_to 'Show', album %></td>
+11:     <td><%= link_to 'Edit', edit_album_path(album) %></td>
+12:     <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/albums/index.html.erb:9
+    app/views/albums/index.html.erb:7:in `each'
+    app/views/albums/index.html.erb:7
+    app/controllers/albums_controller.rb:7:in `index'
+
+Rendered rescues/_trace (64.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 22:58:51) [GET]
+  [4;36;1mAlbum Load (2.5ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+
+ActionView::TemplateError (undefined method `imag_tag' for #<ActionView::Base:0xb71fd440>) on line #9 of app/views/albums/index.html.erb:
+6: 
+7: <% @albums.each do |album| %>
+8:   <tr>
+9:     <td><%= imag_tag album.photo.url(:tiny)%> </td>
+10:     <td><%= link_to 'Show', album %></td>
+11:     <td><%= link_to 'Edit', edit_album_path(album) %></td>
+12:     <td><%= link_to 'Destroy', album, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/albums/index.html.erb:9
+    app/views/albums/index.html.erb:7:in `each'
+    app/views/albums/index.html.erb:7
+    app/controllers/albums_controller.rb:7:in `index'
+
+Rendered rescues/_trace (64.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 22:58:55) [GET]
+  [4;36;1mAlbum Load (2.2ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (5.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 219ms (View: 93, DB: 8) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 22:58:55) [GET]
+
+ActionController::RoutingError (No route matches "/photos/tiny/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 22:59:32) [GET]
+  [4;36;1mAlbum Load (8.7ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 201ms (View: 102, DB: 11) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 22:59:33) [GET]
+
+ActionController::RoutingError (No route matches "/photos/tiny/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-31 22:59:34) [GET]
+  [4;36;1mAlbum Columns (6.2ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 182ms (View: 13, DB: 7) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 22:59:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (10.8ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.5ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 221ms (View: 17, DB: 13) | 200 OK [http://localhost/albums/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-05-31 22:59:41) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>"001fd088d83b0cac107e02.jpg"}}
+  [4;35;1mAlbum Columns (13.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mSQL (13.5ms)[0m   [0mBEGIN[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/albums/1
+Completed in 201ms (DB: 28) | 302 Found [http://localhost/albums/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-31 22:59:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (15.4ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (6.8ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 237ms (View: 2, DB: 23) | 200 OK [http://localhost/albums/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 22:59:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (13.2ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 156ms (View: 18, DB: 14) | 200 OK [http://localhost/albums/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 22:59:45) [GET]
+  [4;35;1mAlbum Load (10.1ms)[0m   [0mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;36;1mAlbum Columns (12.3ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Completed in 175ms (View: 69, DB: 23) | 200 OK [http://localhost/albums]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 22:59:45) [GET]
+
+ActionController::RoutingError (No route matches "/photos/tiny/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 23:00:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 172ms (View: 27, DB: 4) | 200 OK [http://localhost/albums/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-05-31 23:00:31) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>"001fd088d83b0cac107e02.jpg"}}
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/albums/1
+Completed in 221ms (DB: 6) | 302 Found [http://localhost/albums/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-31 23:00:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (13.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.4ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 174ms (View: 3, DB: 16) | 200 OK [http://localhost/albums/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-31 23:01:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (10.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 193ms (View: 3, DB: 12) | 200 OK [http://localhost/albums/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 23:01:15) [GET]
+  [4;35;1mAlbum Load (9.5ms)[0m   [0mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Completed in 176ms (View: 82, DB: 11) | 200 OK [http://localhost/albums]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 23:01:15) [GET]
+
+ActionController::RoutingError (No route matches "/photos/tiny/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 23:01:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (10.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 180ms (View: 21, DB: 11) | 200 OK [http://localhost/albums/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-05-31 23:01:22) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>"001fd088d83b0cac107e02.jpg"}}
+  [4;35;1mAlbum Columns (16.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (14.0ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mSQL (13.1ms)[0m   [0mBEGIN[0m
+[paperclip] Saving attachments.
+  [4;36;1mSQL (10.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/albums/1
+Completed in 202ms (DB: 55) | 302 Found [http://localhost/albums/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-05-31 23:01:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (13.8ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 187ms (View: 3, DB: 15) | 200 OK [http://localhost/albums/1]
+  [4;35;1mSQL (0.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 23:05:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (2.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 203ms (View: 11, DB: 15) | 200 OK [http://localhost/albums/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 23:06:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (15.4ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.7ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 166ms (View: 20, DB: 16) | 200 OK [http://localhost/albums/1/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-05-31 23:06:43) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-5876-me229b-0>}}
+  [4;35;1mAlbum Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (0.6ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100531-5876-1s9eyj5-0 is not recognized by the 'identify' command.>
+  [4;35;1mSQL (4.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 282ms (View: 13, DB: 8) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-05-31 23:13:31) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-6353-1mxob4g-0>}}
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100531-6353-13bp6u3-0 is not recognized by the 'identify' command.>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 603ms (View: 45, DB: 4) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 23:15:19) [GET]
+  [4;36;1mAlbum Load (11.9ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 233ms (View: 81, DB: 14) | 200 OK [http://localhost/albums/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 23:15:20) [GET]
+
+ActionController::RoutingError (No route matches "/photos/tiny/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 23:15:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (10.4ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 154ms (View: 20, DB: 11) | 200 OK [http://localhost/albums/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-05-31 23:15:29) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-6353-bg8zcq-0>}}
+  [4;36;1mAlbum Columns (5.2ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100531-6353-qv0ww1-0 is not recognized by the 'identify' command.>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 277ms (View: 14, DB: 7) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 23:31:24) [GET]
+  [4;36;1mAlbum Load (0.9ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 165ms (View: 100, DB: 3) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 23:31:24) [GET]
+
+ActionController::RoutingError (No route matches "/photos/tiny/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-05-31 23:31:25) [GET]
+  [4;36;1mAlbum Columns (7.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 101ms (View: 15, DB: 8) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-05-31 23:31:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-7041-bsfkcd-0>}}
+  [4;35;1mAlbum Columns (17.4ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100531-7041-1rkeqyp-0 is not recognized by the 'identify' command.>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 235ms (View: 18, DB: 18) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-05-31 23:33:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-7041-1ad9edx-0>}}
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 166ms (View: 11, DB: 4) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-05-31 23:34:47) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-7101-12ivmn3-0>}}
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 199ms (View: 70, DB: 4) | 200 OK [http://localhost/albums]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-05-31 23:34:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-7101-1d7d43m-0>}}
+  [4;35;1mAlbum Columns (18.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100531-7101-18oiow0-0 is not recognized by the 'identify' command.>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 240ms (View: 16, DB: 19) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-05-31 23:43:45) [GET]
+  [4;36;1mAlbum Load (1.1ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 275ms (View: 199, DB: 3) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-31 23:43:45) [GET]
+
+ActionController::RoutingError (No route matches "/photos/tiny/missing.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-05-31 23:43:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mAlbum Columns (7.2ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.5ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 139ms (View: 29, DB: 9) | 200 OK [http://localhost/albums/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-05-31 23:43:55) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-3968-1jho3hm-0>}}
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100531-3968-gg6y71-0 is not recognized by the 'identify' command.>
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 633ms (View: 11, DB: 3) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-05-31 23:48:21) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-4067-1wozju8-0>}}
+  [4;36;1mAlbum Columns (7.8ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100531-4067-v3jjel-0 is not recognized by the 'identify' command.>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 316ms (View: 45, DB: 10) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-05-31 23:50:56) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100531-4261-z2u9p6-0>}}
+  [4;36;1mAlbum Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100531-4261-149zkfx-0 is not recognized by the 'identify' command.>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 293ms (View: 42, DB: 3) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-06-01 00:05:22) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100601-4261-16d9e68-0>}}
+  [4;36;1mAlbum Columns (8.0ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 213ms (View: 17, DB: 9) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-06-01 00:05:49) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100601-4261-4fbc07-0>}}
+  [4;36;1mAlbum Columns (7.5ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (5.9ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAlbum Update (0.7ms)[0m   [0mUPDATE `albums` SET `updated_at` = '2010-05-31 16:05:51', `photo_file_name` = 'shell.pdf', `photo_updated_at` = '2010-05-31 16:05:50', `photo_file_size` = 631888, `photo_content_type` = 'application/pdf' WHERE `id` = 1[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/miderph/program/ruby/depot/public/assets/products/1/original/shell.pdf
+[paperclip] saving /home/miderph/program/ruby/depot/public/assets/products/1/small/shell.pdf
+  [4;36;1mSQL (6.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/albums/1
+Completed in 2091ms (DB: 21) | 302 Found [http://localhost/albums/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-06-01 00:05:52) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAlbum Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (3.4ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.photo) on line #1 of app/views/albums/show.html.erb:
+1: <%= image_tag @product.photo.url(:small) %>
+2: 
+3: <%= link_to 'Edit', edit_album_path(@album) %> |
+4: <%= link_to 'Back', albums_path %>
+
+    app/views/albums/show.html.erb:1
+    app/controllers/albums_controller.rb:18:in `show'
+
+Rendered rescues/_trace (52.7ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-06-01 00:07:47) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"1", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100601-4261-1ykf4b4-0>}}
+  [4;35;1mAlbum Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.1ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 1023ms (View: 11, DB: 3) | 200 OK [http://localhost/albums/1]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-06-01 07:22:46) [GET]
+  [4;36;1mAlbum Load (1.1ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 454ms (View: 345, DB: 3) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-01 07:22:46) [GET]
+  Parameters: {"1275321950"=>nil}
+
+ActionController::RoutingError (No route matches "/assets/products/1/tiny/shell.pdf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#new (for 127.0.0.1 at 2010-06-01 07:22:47) [GET]
+  [4;36;1mAlbum Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 143ms (View: 38, DB: 2) | 200 OK [http://localhost/albums/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-06-01 07:22:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100601-4228-1s7stg-0>}}
+  [4;35;1mAlbum Columns (6.2ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100601-4228-j3pui9-0 is not recognized by the 'identify' command.>
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 526ms (View: 13, DB: 7) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (39.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-06-01 07:49:08) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100601-4228-55t2iv-0>}}
+  [4;36;1mAlbum Columns (26.7ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+[paperclip] An error was received while processing: #<Paperclip::NotIdentifiedByImageMagickError: /tmp/stream20100601-4228-unpprn-0 is not recognized by the 'identify' command.>
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/albums
+Rendering albums/new
+Completed in 305ms (View: 68, DB: 67) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#create (for 127.0.0.1 at 2010-06-01 07:49:53) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100601-5362-1o57mdd-0>}}
+  [4;36;1mAlbum Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mAlbum Create (56.3ms)[0m   [0;1mINSERT INTO `albums` (`created_at`, `photo_file_size`, `updated_at`, `photo_file_name`, `photo_content_type`, `photo_updated_at`) VALUES('2010-05-31 23:49:53', 31371, '2010-05-31 23:49:53', 'bc66cc6ed1f49cd781cb4a95.jpg', 'image/jpeg', '2010-05-31 23:49:53')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/miderph/program/ruby/depot/public/assets/products/2/original/bc66cc6ed1f49cd781cb4a95.jpg
+[paperclip] saving /home/miderph/program/ruby/depot/public/assets/products/2/small/bc66cc6ed1f49cd781cb4a95.jpg
+  [4;35;1mSQL (30.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/albums/2
+Completed in 879ms (DB: 90) | 302 Found [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-06-01 07:49:54) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAlbum Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (24.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 2) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.photo) on line #1 of app/views/albums/show.html.erb:
+1: <%= image_tag @product.photo.url(:small) %>
+2: 
+3: <%= link_to 'Edit', edit_album_path(@album) %> |
+4: <%= link_to 'Back', albums_path %>
+
+    app/views/albums/show.html.erb:1
+    app/controllers/albums_controller.rb:18:in `show'
+
+Rendered rescues/_trace (74.6ms)
+Rendered rescues/_request_and_response (19.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#index (for 127.0.0.1 at 2010-06-01 07:50:08) [GET]
+  [4;36;1mAlbum Load (1.0ms)[0m   [0;1mSELECT * FROM `albums` [0m
+Rendering template within layouts/albums
+Rendering albums/index
+  [4;35;1mAlbum Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+Completed in 198ms (View: 130, DB: 3) | 200 OK [http://localhost/albums]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-01 07:50:08) [GET]
+  Parameters: {"1275321950"=>nil}
+
+ActionController::RoutingError (No route matches "/assets/products/1/tiny/shell.pdf" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (2.8ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-01 07:50:08) [GET]
+  Parameters: {"1275349793"=>nil}
+
+ActionController::RoutingError (No route matches "/assets/products/2/tiny/bc66cc6ed1f49cd781cb4a95.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#edit (for 127.0.0.1 at 2010-06-01 07:50:11) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAlbum Columns (11.7ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (0.6ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 2) [0m
+Rendering template within layouts/albums
+Rendering albums/edit
+Completed in 198ms (View: 29, DB: 13) | 200 OK [http://localhost/albums/2/edit]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#update (for 127.0.0.1 at 2010-06-01 07:50:15) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"Pv01CnqCQIAF+tq8Il28CnoMgN412TH0LuklaDqHxAM=", "id"=>"2", "album"=>{"photo"=>#<File:/tmp/RackMultipart20100601-5362-1xtc2cd-0>}}
+  [4;36;1mAlbum Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `albums`[0m
+  [4;35;1mAlbum Load (1.2ms)[0m   [0mSELECT * FROM `albums` WHERE (`albums`.`id` = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mAlbum Update (114.6ms)[0m   [0mUPDATE `albums` SET `updated_at` = '2010-05-31 23:50:15', `photo_updated_at` = '2010-05-31 23:50:15' WHERE `id` = 2[0m
+[paperclip] Saving attachments.
+[paperclip] deleting /home/miderph/program/ruby/depot/public/assets/products/2/original/bc66cc6ed1f49cd781cb4a95.jpg
+[paperclip] deleting /home/miderph/program/ruby/depot/public/assets/products/2/small/bc66cc6ed1f49cd781cb4a95.jpg
+[paperclip] saving /home/miderph/program/ruby/depot/public/assets/products/2/original/bc66cc6ed1f49cd781cb4a95.jpg
+[paperclip] saving /home/miderph/program/ruby/depot/public/assets/products/2/small/bc66cc6ed1f49cd781cb4a95.jpg
+  [4;36;1mSQL (31.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/albums/2
+Completed in 529ms (DB: 150) | 302 Found [http://localhost/albums/2]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-06-01 07:50:15) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAlbum Columns (13.8ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.0ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 2) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.photo) on line #1 of app/views/albums/show.html.erb:
+1: <%= image_tag @product.photo.url(:small) %>
+2: 
+3: <%= link_to 'Edit', edit_album_path(@album) %> |
+4: <%= link_to 'Back', albums_path %>
+
+    app/views/albums/show.html.erb:1
+    app/controllers/albums_controller.rb:18:in `show'
+
+Rendered rescues/_trace (79.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.8ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AlbumsController#show (for 127.0.0.1 at 2010-06-01 07:51:22) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mAlbum Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `albums`[0m
+  [4;36;1mAlbum Load (1.4ms)[0m   [0;1mSELECT * FROM `albums` WHERE (`albums`.`id` = 2) [0m
+Rendering template within layouts/albums
+Rendering albums/show
+Completed in 215ms (View: 14, DB: 5) | 200 OK [http://localhost/albums/2]

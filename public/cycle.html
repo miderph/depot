@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+  <html xmlns="http://www.w3.org/1999/xhtml">  
+    <head>  
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+  <title>test</title>  
+    <script type="text/javascript">  
+              /*  
+         * Draw a Oval  
+         * author:李英夫, Thanks for 袁洲's help in math.   
+        * The following is the formula of Oval.  
+  11.      * All dots is drawn by it.  
+  12.      * x = r*a*cosθ　(0 <= θ <= 2π)    
+  13.      * y = r*b*sinθ　(0 <= θ <= 2π)  
+  14.      * b*b + r*r = a*a //Pythagoras Theorem  
+  15.      */  
+       var Circle = {  
+          centre_of_circle : {x:400,y:300},  
+           radius : 1,  
+           dot : function(x,y,w){  
+               return "<div id='dot_"+x+y+"' style='font-size:0;width:"+w+"px;height:"+w+"px;position:absolute;background-color:#000;top:"+(y)+"px;left:"+(x)+"px'></div>";  
+           },  
+           dot1 : function(x,y,w){  
+               return "<div style='font-size:0;width:"+w+"px;height:"+w+"px;position:absolute;background-color:#000;top:"+(y)+"px;left:"+(x)+"px'></div>";  
+           },  
+           draw : function(){  
+               var s = "",  
+                   dots = 500,  
+                   a = 150,  
+                   b = 200,  
+                   dotsArr = [];  
+               for(var i = 0; i < dots; i++){  
+                   var x = Circle.centre_of_circle.x+Circle.radius*Math.cos(i*2*Math.PI/dots)*a;  
+                   var y = Circle.centre_of_circle.y+Circle.radius*Math.sin(i*2*Math.PI/dots)*b;  
+                   s += Circle.dot(x, y, 2);  
+                   dotsArr.push({"y":y,"x":x});  
+               }  
+               document.body.innerHTML = s;  
+               return dotsArr;  
+           },  
+           draw1 : function(){  
+              var s = [],  
+                  dots = 500,  
+                  a = 200,  
+                  b = 150,  
+                  dotsArr = [];  
+              for(var i = 0; i < dots; i++){  
+                  var x = Circle.centre_of_circle.x+Circle.radius*Math.cos(i*2*Math.PI/dots)*a;  
+                  var y = Circle.centre_of_circle.y+Circle.radius*Math.sin(i*2*Math.PI/dots)*b;  
+                  s.push(Circle.dot1(x, y, 2));  
+                  dotsArr.push({"y":y,"x":x});  
+               }  
+              document.body.innerHTML = document.body.innerHTML+s.join();  
+              return dotsArr;  
+          }  
+       }  
+       window.onload = function(){  
+          var start = new Date();  
+          var dots = Circle.draw();  
+//           alert(new Date() - start);  
+            
+          start = new Date();  
+          var dots = Circle.draw1();  
+//          alert(new Date() - start);  
+           
+//          var count = 0;  
+//          var t = window.setInterval(function(){  
+//              document.getElementById("dot_"+dots[count].x+dots[count].y).style.display = "block";  
+//              count++;  
+//              if(count >= dots.length) window.clearInterval(t);  
+//           },1);  
+            
+       } 
+	   var Oval = {
+	   		owner : {name:"yan",age:25 },
+			showName : function(){
+				alert(Oval.owner.name);
+			}
+	   } 
+	   //Oval.showName();
+	   
+   </script>  
+   </head>  
+    
+  <body>  
+  </body>  
+  </html>  
