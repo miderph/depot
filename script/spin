@@ -1,0 +1,1 @@
+mongrel_rails start -e production -p 8080 -r /var/www/webapps/space/current/public -l /var/www/webapps/space/current/log/m.log -P /var/www/webapps/space/current/tmp/pids/dispatch.0.pid -d
